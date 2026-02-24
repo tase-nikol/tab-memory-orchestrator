@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Tab Memory Orchestrator</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      width: 320px;
+      padding: 16px;
+    }
+
+    h1 {
+      font-size: 16px;
+      margin: 0 0 12px 0;
+    }
+
+    .section {
+      margin-bottom: 14px;
+    }
+
+    .label {
+      font-size: 12px;
+      color: #666;
+    }
+
+    .value {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .status-low { color: #0a7; }
+    .status-medium { color: #c77a00; }
+    .status-high { color: #d11; }
+
+    button {
+      width: 100%;
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      background: white;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .small {
+      font-size: 11px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tab Memory Orchestrator</h1>
+
+  <div class="section">
+    <div class="label">Status</div>
+    <div id="pressure" class="value">—</div>
+  </div>
+  
+  <div class="section">
+    <div class="label">Reasons</div>
+    <div id="reasons" class="value small">—</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Memory</div>
+    <div id="memory" class="value">—</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Battery</div>
+    <div id="battery" class="value">—</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Last Discarded</div>
+    <div id="lastDiscarded" class="value small">None</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Recently Discarded</div>
+    <div id="history" class="value small">None</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Focus Mode</div>
+    <div id="focusInfo" class="value small">—</div>
+    <button id="toggleFocusBtn" style="margin-top:8px;">Enable Focus Mode</button>
+  </div>
+  
+  
+  <div class="section">
+    <button id="discardNowBtn">Discard Now</button>
+  </div>
+  
+
+  <div class="section">
+    <button id="openOptionsBtn">Open Settings</button>
+  </div>
+
+  <div class="section">
+    <button id="toggleBtn">Disable Orchestrator</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

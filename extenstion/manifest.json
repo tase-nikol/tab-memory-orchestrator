@@ -3,7 +3,7 @@
   "name": "Tab Memory Orchestrator (Hybrid)",
   "version": "0.2.0",
   "permissions": ["tabs", "storage", "nativeMessaging"],
-  "background": { "service_worker": "background.js" },
+  "background": { "service_worker": "background.js","type": "module"},
   "options_page": "options.html",
   "action": {
     "default_popup": "popup.html",
